@@ -52,14 +52,45 @@ def leer_por_id(buscar_id):
                 }
     return None
 
+
+# Probar código
+
 if __name__ == "__main__":
-    perros = leer_todos()
-    if not perros:
-        print("No hay registros en el archivo.")
-    else:
-        print("=== LISTA DE PERROS ===")
-        for p in perros:
-            print(f"ID: {p['id']}")
-            print(f"Nombre: {p['nombre']}")
-            print(f"Raza: {p['raza']}")
-            print("-" * 30)
+    while True:
+        print("\n=== MENÚ DE LECTURA (PERRERA) ===")
+        print("1. Mostrar todos los perros")
+        print("2. Buscar perro por ID")
+        print("0. Salir")
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            perros = leer_todos()
+            if not perros:
+                print("No hay registros en el archivo.")
+            else:
+                print("\n=== LISTA DE PERROS ===")
+                for p in perros:
+                    print(f"ID: {p['id']}")
+                    print(f"Nombre: {p['nombre']}")
+                    print(f"Raza: {p['raza']}")
+                    print("-" * 30)
+
+        elif opcion == "2":
+            try:
+                buscar_id = int(input("Introduce el ID del perro: "))
+                perro = leer_por_id(buscar_id)
+                if perro:
+                    print("\n=== RESULTADO ===")
+                    print(f"ID: {perro['id']}")
+                    print(f"Nombre: {perro['nombre']}")
+                    print(f"Raza: {perro['raza']}")
+                else:
+                    print("No se encontró ningún perro con ese ID.")
+            except ValueError:
+                print("El ID debe ser un número entero.")
+
+        elif opcion == "0":
+            print("Saliendo...")
+            break
+        else:
+            print("Opción no válida.")
