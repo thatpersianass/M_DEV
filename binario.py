@@ -3,7 +3,7 @@ import os
 
 formato = "i20s30s"
 tamaño_registro = struct.calcsize(formato)
-archivo = "registros.bin"  # Nombre del archivo binario
+archivo = "registros.bin"  
 
 def leer_todos():
     """
@@ -51,3 +51,15 @@ def leer_por_id(buscar_id):
                     "raza": raza.decode(errors="ignore").strip()
                 }
     return None
+
+if __name__ == "__main__":
+    perros = leer_todos()
+    if not perros:
+        print("No hay registros en el archivo.")
+    else:
+        print("=== LISTA DE PERROS ===")
+        for p in perros:
+            print(f"ID: {p['id']}")
+            print(f"Nombre: {p['nombre']}")
+            print(f"Raza: {p['raza']}")
+            print("-" * 30)
