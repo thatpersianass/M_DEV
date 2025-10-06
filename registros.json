@@ -1,0 +1,12 @@
+[
+    {
+        "ID": 1,
+        "Nombre": "Raymundo",
+        "Raza": "Chihuahua"
+    },
+    {
+        "ID": 2,
+        "Nombre": "Pipo",
+        "Raza": "Mestizo"
+    }
+]
