@@ -2,7 +2,7 @@ import os
 
 def crear_fichero():
     '''Crea un nuevo fichero de texto vacío con el nombre que indique el usuario'''
-    nombref = input("¿Cómo quieres que se llame el fichero? ")
+    nombref = "registros"
     ruta_completaf = nombref + ".txt"
     with open(ruta_completaf, "w") as arc:
         arc.write("")
