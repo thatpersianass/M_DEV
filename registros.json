@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "nombre": "Luna",
+        "raza": "Labrador Retriever"
+    },
+    {
+        "id": 2,
+        "nombre": "Max",
+        "raza": "Pastor Alemán"
+    },
+    {
+        "id": 3,
+        "nombre": "Kira",
+        "raza": "Bulldog Francés"
+    },
+    {
+        "id": 4,
+        "nombre": "Rocky",
+        "raza": "Golden Retriever"
+    },
+    {
+        "id": 5,
+        "nombre": "Nala",
+        "raza": "Beagle"
+    }
+]
