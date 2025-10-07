@@ -69,7 +69,9 @@ def crear_registro():
     guardar_datos(datos)
     print("Registro creado con éxito.")
 
+
 def leer_registro():
+    registros = []
     datos = cargar_datos()
     if not datos:
         print("No hay registros.")
@@ -78,21 +80,20 @@ def leer_registro():
     opcion = input("¿Quieres ver [A]ll (todos) o [1] (un registro por ID)? ").strip().lower()
 
     if opcion == "a":
-        for i, reg in enumerate(datos, start=1):
-            print(f"\n--- Registro {i} ---")
-            print(json.dumps(reg, indent=4, ensure_ascii=False))
+        for reg in datos:
+            registros.append(json.dumps(reg, ensure_ascii=False))
     elif opcion == "1":
         try:
             idx = int(input("Introduce el ID (posición del registro): ")) - 1
             if 0 <= idx < len(datos):
-                print(json.dumps(datos[idx], indent=4, ensure_ascii=False))
+                registros.append(json.dumps(datos[idx], ensure_ascii=False))
             else:
                 print("ID no válido.")
         except ValueError:
             print("ID inválido.")
     else:
         print("Opción inválida.")
-
+    return registros
 # ---------------------- Menú ----------------------
 # def menu():
 #     while True:
