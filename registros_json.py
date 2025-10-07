@@ -69,7 +69,6 @@ def crear_registro():
     guardar_datos(datos)
     print("Registro creado con éxito.")
 
-
 def leer_registro():
     registros = []
     datos = cargar_datos()
@@ -81,12 +80,12 @@ def leer_registro():
 
     if opcion == "a":
         for reg in datos:
-            registros.append(json.dumps(reg, ensure_ascii=False))
+            registros.append(reg)
     elif opcion == "1":
         try:
             idx = int(input("Introduce el ID (posición del registro): ")) - 1
             if 0 <= idx < len(datos):
-                registros.append(json.dumps(datos[idx], ensure_ascii=False))
+                registros.append(datos[idx])
             else:
                 print("ID no válido.")
         except ValueError:
