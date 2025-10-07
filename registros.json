@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "nombre": "Max",
+        "raza": "Labrador Retriever"
+    },
+    {
+        "id": "2",
+        "nombre": "Luna",
+        "raza": "Pastor Alemán"
+    },
+    {
+        "id": "3",
+        "nombre": "Rocky",
+        "raza": "Bulldog Francés"
+    },
+    {
+        "id": "4",
+        "nombre": "Nala",
+        "raza": "Golden Retriever"
+    },
+    {
+        "id": "5",
+        "nombre": "Toby",
+        "raza": "Beagle"
+    },
+    {
+        "id": "6",
+        "nombre": "juan",
+        "raza": "ejemplo"
+    },
+    {
+        "ID": "7",
+        "Nombre": "carlos",
+        "Raza": "caniche mezclado con un pitbull frances"
+    }
+]
