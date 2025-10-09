@@ -268,6 +268,7 @@ def submenu(tipo_archivo):
             print(f"{color_rosa}2.{reset_color} TXT → BIN")
     print(f"{color_rosa}3.{reset_color} Salir al menú principal")
 
+rj.guardar_datos([])
 archivo = obtener_archivo_actual()
 while True:
     tipo_actual = tipo_archivo(archivo)
